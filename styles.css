@@ -1,12 +1,19 @@
 /* Modern CSS Reset & Base Styles */
 :root {
     --primary: #2D3250;
-    --accent: #00DDFF; /* Electric blue */
+    --accent: #00DDFF;
     --background: #F7F7F2;
     --text: #2D2D2A;
-    --gradient: linear-gradient(135deg, var(--primary) 0%, #424769 100%);
-    --nav-text: rgba(255, 255, 255, 0.95); /* Brighter nav text */
-    --nav-hover: #00DDFF; /* Electric blue for nav hover */
+    --gradient: white; /* Changed from gradient to white */
+    --nav-text: #2D2D2A; /* Changed to dark color */
+    --nav-hover: #00DDFF;
+}
+
+header {
+    background: var(--gradient);
+    color: var(--text);
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -18,13 +25,6 @@ body {
     background-color: var(--background);
 }
 
-/* Modern Header Design */
-header {
-    background: var(--gradient);
-    color: white;
-    padding: 1.5rem 0;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-}
 
 .header-content {
     max-width: 1200px;
@@ -39,7 +39,7 @@ header {
     margin: 0 0 1.5rem 0;
     position: relative;
     display: inline-block;
-    color: white; /* Ensure title is white */
+    color: var(--text)
 }
 
 .site-title::after {
@@ -70,12 +70,12 @@ header {
 .nav-link {
     color: var(--nav-text);
     text-decoration: none;
-    font-size: 1.1rem; /* Slightly larger */
+    font-size: 1.1rem;
     font-weight: 500;
     padding: 0.3rem 0;
     transition: all 0.2s ease;
     position: relative;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow for better readability */
+    text-shadow: none; /* Removed text shadow */
 }
 
 .nav-link:hover {
